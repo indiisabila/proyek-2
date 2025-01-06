@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 
 <!-- This code was generated using AnimaApp.com. 
@@ -27,6 +31,7 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
 
 <body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="aku-bisa">
     <div class="container-center-horizontal">
+
         <div class="aku-bisa screen " data-id="25:131">
             <div class="home-dLgTfx" data-id="25:132"><img class="rectangle-3-vkI6KG rectangle-3" data-id="25:133" id="rectangle-3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6757021cdec8e05f06cce034/releases/6757038a191b26897c86e1e7/img/rectangle-3.png" alt="Rectangle 3">
                 <div class="home_container-vkI6KG" data-id="25:134">
@@ -197,9 +202,19 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
                     <div class="kontak-zDhwfA poppins-medium-dove-gray-16px" data-id="25:257">Kontak</div>
                 </a>
                 <div class="button-zDhwfA button" data-id="268:2"><a href="utama.php?page=login">
-                        <div class="login-cRrjoS valign-text-middle worksans-medium-white-15px" data-id="268:3">Login</div>
-                </a>
-            </div>
+                        <?php if (isset($_SESSION['email'])): ?>
+                            <!-- Tampilkan tombol logout jika user sudah login -->
+                            <a href="logout.php" class="btn btn-primary">
+                                <div class="login-cRrjoS valign-text-middle worksans-medium-white-15px" data-id="268:3">Logout</div>
+                            </a>
+                        <?php else: ?>
+                            <!-- Tampilkan tombol login jika user belum login -->
+                            <a href="utama.php?page=login" class="btn btn-primary">
+                                <div class="login-cRrjoS valign-text-middle worksans-medium-white-15px" data-id="268:3">Login</div>
+                            </a>
+                        <?php endif; ?>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
