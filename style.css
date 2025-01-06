@@ -1,0 +1,1764 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700|Work+Sans:500,400|Inter:500,400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6757021adec8e05f06cce02f.6757021bdec8e05f06cce032.PXEVeqA.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+    outline: none;
+}
+
+.screen * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.screen div {
+    -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+    display: contents;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.full-width-a {
+    width: 100%;
+}
+
+.full-height-a {
+    height: 100%;
+}
+
+.container-center-vertical {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    pointer-events: none;
+}
+
+.container-center-vertical>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.auto-animated div {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated input {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+    opacity: 1;
+}
+
+.overlay-base {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.overlay-base.animate-appear {
+    align-items: center;
+    animation: reveal 0.3s ease-in-out 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+    display: block;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+    pointer-events: none;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.animate-nodelay {
+    animation-delay: 0s;
+}
+
+.align-self-flex-start {
+    align-self: flex-start;
+}
+
+.align-self-flex-end {
+    align-self: flex-end;
+}
+
+.align-self-flex-center {
+    align-self: flex-center;
+}
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --blueberry: #4c9afe;
+    --cloud: #c4c4c4;
+    --dove-gray: #707070;
+    --gray: #828282;
+    --log-cabin: #222222;
+    --onyx: #393939;
+    --pink-swan: #b7b7b7;
+    --quick-silver: #a6a6a6;
+    --white: #ffffff;
+
+    --font-size-l: 20px;
+    --font-size-m: 16px;
+    --font-size-s: 15px;
+    --font-size-xl: 24px;
+    --font-size-xs: 14px;
+    --font-size-xxl: 32px;
+    --font-size-xxxl: 36px;
+
+    --font-family-inter: "Inter", Helvetica;
+    --font-family-poppins: "Poppins", Helvetica;
+    --font-family-work_sans: "Work Sans", Helvetica;
+}
+
+.subheading {
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.body-text {
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.poppins-medium-dove-gray-16px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-medium-onyx-16px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-semi-bold-onyx-36px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxxl);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.inter-medium-white-16px {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-blueberry-16px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-bold-onyx-24px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-medium-quick-silver-14px {
+    color: var(--quick-silver);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-blueberry-20px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-medium-dove-gray-14px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.worksans-medium-white-15px {
+    color: var(--white);
+    font-family: var(--font-family-work_sans);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.worksans-normal-cloud-16px {
+    color: var(--cloud);
+    font-family: var(--font-family-work_sans);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.poppins-medium-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-black-32px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-semi-bold-blueberry-16px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.poppins-normal-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.aku-bisa-1 {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    width: auto;
+}
+
+.foto-kegiatan-1 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-2 {
+    background-color: transparent;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-3 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-4 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.group-1 {
+    background-color: transparent;
+    position: absolute;
+}
+
+.layanan {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+}
+
+.menu {
+    background-color: transparent;
+    position: absolute;
+}
+
+.rectangle-16 {
+    background-color: var(--white);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.rectangle-3 {
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.rectangle-5 {
+    left: 0px;
+    top: 0px;
+}
+
+.tentang-kami {
+    background-color: transparent;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+}
+
+.ulasan {
+    background-color: transparent;
+    position: absolute;
+}
+
+/* screen - aku-bisa */
+
+.aku-bisa {
+    background-color: var(--white);
+    height: 4812px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 1440px;
+}
+
+.aku-bisa .home-dLgTfx {
+    background-color: transparent;
+    height: 640px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.aku-bisa .rectangle-3-vkI6KG {
+    background-color: transparent;
+    height: 640px;
+    object-fit: cover;
+}
+
+.aku-bisa .home_container-vkI6KG {
+    background-color: transparent;
+    height: 569px;
+    left: 240px;
+    position: absolute;
+    top: 0px;
+    width: 964px;
+}
+
+.aku-bisa .title-eDASz8 {
+    background-color: transparent;
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    height: auto;
+    left: 52px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 164px;
+    width: 289px;
+}
+
+.aku-bisa .bawa-aku-bisa-untuk-eDASz8 {
+    background-color: transparent;
+    color: #f4f4f4;
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxxl);
+    font-style: normal;
+    font-weight: 600;
+    height: auto;
+    left: 52px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 256px;
+    width: 601px;
+}
+
+.aku-bisa .button-eDASz8 {
+    background: linear-gradient(180deg, rgb(1.0000000591389835, 129.00000751018524, 245.00000059604645) 0%, rgb(93.00000205636024, 178.00000458955765, 255) 100%);
+    border-radius: 4px;
+    cursor: pointer;
+    height: 64px;
+    left: 74px;
+    top: 389px;
+    width: 216px;
+}
+
+.aku-bisa .daftar-observasi-anak-v2b7lx {
+    background-color: transparent;
+    height: 22px;
+    left: 19px;
+    letter-spacing: 0.00px;
+    line-height: 22.5px;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    white-space: nowrap;
+    width: 173px;
+}
+
+.aku-bisa .about-dLgTfx {
+    background-color: transparent;
+    height: 571px;
+    left: 240px;
+    position: absolute;
+    top: 780px;
+    width: 960px;
+}
+
+.aku-bisa .rectangle-6-RoJmPw {
+    background-color: var(--white);
+    height: 525px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 960px;
+}
+
+.aku-bisa .about__container-RoJmPw {
+    background-color: transparent;
+    height: 453px;
+    left: 0px;
+    position: absolute;
+    top: 118px;
+    width: 960px;
+}
+
+.aku-bisa .rectangle-8-6sjVFd {
+    background-color: var(--white);
+    height: 378px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 960px;
+}
+
+.aku-bisa .rectangle-7-6sjVFd {
+    background-color: transparent;
+    height: 378px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 75px;
+    width: 380px;
+}
+
+.aku-bisa .about__data-6sjVFd {
+    background-color: transparent;
+    height: 281px;
+    left: 536px;
+    position: absolute;
+    top: 75px;
+    width: 430px;
+}
+
+.aku-bisa .tentang-kami-JxOIlz {
+    color: transparent;
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 600;
+    left: 1px;
+    top: 0px;
+    width: 115px;
+}
+
+.aku-bisa .span0-jHBmee {
+    font-style: normal;
+}
+
+.aku-bisa .span1-jHBmee {
+    color: #bf1c2d;
+    font-style: normal;
+}
+
+.aku-bisa .span2-jHBmee {
+    color: #3eadf8;
+    font-style: normal;
+}
+
+.aku-bisa .selamat-datang-di-website-aku-bisa-JxOIlz {
+    background-color: transparent;
+    height: 159px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 29px;
+    width: 424px;
+}
+
+.aku-bisa .aku-bisa-adalah-sebu-JxOIlz {
+    background-color: transparent;
+    height: 71px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: justify;
+    top: 211px;
+    width: 424px;
+}
+
+.aku-bisa .services-dLgTfx {
+    background-color: transparent;
+    height: 504px;
+    left: 240px;
+    position: absolute;
+    top: 1499px;
+    width: 964px;
+}
+
+.aku-bisa .rectangle-9-zxWYLp {
+    background-color: var(--white);
+    height: 504px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 960px;
+}
+
+.aku-bisa .rectangle-10-zxWYLp {
+    background-color: var(--white);
+    height: 504px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 960px;
+}
+
+.aku-bisa .button-zxWYLp {
+    cursor: pointer;
+    height: 60px;
+    left: 259px;
+    top: 364px;
+    width: 179px;
+}
+
+.aku-bisa .rectangle-5-H8FbBx {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 60px;
+    position: absolute;
+    width: 174px;
+}
+
+.aku-bisa .group-1-H8FbBx {
+    height: 23px;
+    left: 11px;
+    top: 17px;
+    width: 170px;
+}
+
+.aku-bisa .gangguan-disaudia-R3ICbf {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 168px;
+}
+
+.aku-bisa .button-vxZEcw {
+    cursor: pointer;
+    height: 59px;
+    left: 603px;
+    top: 264px;
+    width: 121px;
+}
+
+.aku-bisa .rectangle-5-j7wgSo {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 59px;
+    position: absolute;
+    width: 121px;
+}
+
+.aku-bisa .group-1-j7wgSo {
+    height: 23px;
+    left: 39px;
+    top: 21px;
+    width: 55px;
+}
+
+.aku-bisa .gdd-rDpuAQ {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 53px;
+}
+
+.aku-bisa .button-P6tAPm {
+    cursor: pointer;
+    height: 59px;
+    left: 75px;
+    top: 364px;
+    width: 122px;
+}
+
+.aku-bisa .rectangle-5-73OH5d {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 59px;
+    position: absolute;
+    width: 122px;
+}
+
+.aku-bisa .group-1-73OH5d {
+    height: 23px;
+    left: 28px;
+    top: 17px;
+    width: 96px;
+}
+
+.aku-bisa .disleksia-Fc85jW {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 94px;
+}
+
+.aku-bisa .button-PajwbX {
+    height: 60px;
+    left: 695px;
+    top: 364px;
+    width: 177px;
+}
+
+.aku-bisa .rectangle-5-MxES52 {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 60px;
+    position: absolute;
+    width: 174px;
+}
+
+.aku-bisa .group-1-MxES52 {
+    cursor: pointer;
+    height: 23px;
+    left: 9px;
+    top: 17px;
+    width: 170px;
+}
+
+.aku-bisa .intelectual-disability-eIV2vn {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 168px;
+}
+
+.aku-bisa .button-9L0Meu {
+    height: 60px;
+    left: 197px;
+    top: 264px;
+    width: 119px;
+}
+
+.aku-bisa .rectangle-5-tr16eJ {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 60px;
+    position: relative;
+    width: 119px;
+}
+
+.aku-bisa .button-lfKhf4 {
+    cursor: pointer;
+    height: 60px;
+    left: 690px;
+    top: 175px;
+    width: 174px;
+}
+
+.aku-bisa .rectangle-5-2r608A {
+    background-color: transparent;
+    height: 60px;
+    position: absolute;
+    width: 174px;
+}
+
+.aku-bisa .group-1-2r608A {
+    height: 23px;
+    left: 26px;
+    top: 19px;
+    width: 143px;
+}
+
+.aku-bisa .celebral-palsy-WAd3cv {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 141px;
+}
+
+.aku-bisa .button-MIb5t4 {
+    cursor: pointer;
+    height: 60px;
+    left: 468px;
+    top: 176px;
+    width: 174px;
+}
+
+.aku-bisa .rectangle-5-Ft7ujZ {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 60px;
+    position: absolute;
+    width: 174px;
+}
+
+.aku-bisa .group-1-Ft7ujZ {
+    height: 23px;
+    left: 16px;
+    top: 17px;
+    width: 143px;
+}
+
+.aku-bisa .terlambat-bicara-69GOwS {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 141px;
+}
+
+.aku-bisa .button-uzFjwQ {
+    cursor: pointer;
+    height: 60px;
+    left: 75px;
+    top: 176px;
+    width: 153px;
+}
+
+.aku-bisa .rectangle-5-p4vNZJ {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 60px;
+    position: absolute;
+    width: 153px;
+}
+
+.aku-bisa .group-1-p4vNZJ {
+    height: 23px;
+    left: 18px;
+    top: 18px;
+    width: 126px;
+}
+
+.aku-bisa .down-syndrom-bZMN46 {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 124px;
+}
+
+.aku-bisa .melayani-gangguan-anak-zxWYLp {
+    background-color: transparent;
+    height: 66px;
+    left: 228px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 71px;
+    width: 496px;
+}
+
+.aku-bisa .adhd-zxWYLp {
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 500;
+    height: 29px;
+    left: 227px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 279px;
+    width: 58px;
+}
+
+.aku-bisa .button-nZ8dx8 {
+    cursor: pointer;
+    height: 59px;
+    left: 476px;
+    top: 364px;
+    width: 166px;
+}
+
+.aku-bisa .rectangle-5-rnenVV {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 59px;
+    position: absolute;
+    width: 166px;
+}
+
+.aku-bisa .group-1-rnenVV {
+    height: 23px;
+    left: 14px;
+    top: 17px;
+    width: 145px;
+}
+
+.aku-bisa .gangguan-belajar-XOxzIc {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: 143px;
+}
+
+.aku-bisa .button-Q9xOSU {
+    height: 59px;
+    left: 285px;
+    top: 176px;
+    width: 122px;
+}
+
+.aku-bisa .rectangle-5-dw8tnJ {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 59px;
+    position: absolute;
+    width: 122px;
+}
+
+.aku-bisa .group-1-dw8tnJ {
+    height: 23px;
+    left: 0px;
+    top: 18px;
+    width: 124px;
+}
+
+.aku-bisa .autis-W1sJXl {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    width: 122px;
+}
+
+.aku-bisa .menu-dLgTfx {
+    height: 504px;
+    left: 240px;
+    top: 2115px;
+    width: 964px;
+}
+
+.aku-bisa .foto-kegiatan-2-fvZxXA {
+    height: 193px;
+    top: 311px;
+    width: 320px;
+}
+
+.aku-bisa .foto-fvZxXA {
+    background-color: transparent;
+    height: 31px;
+    left: 333px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    white-space: nowrap;
+    width: 108px;
+}
+
+.aku-bisa .kegiatan-fvZxXA {
+    background-color: transparent;
+    height: 31px;
+    left: 445px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    white-space: nowrap;
+    width: 187px;
+}
+
+.aku-bisa .foto-kegiatan-1-fvZxXA {
+    height: 193px;
+    left: 1px;
+    top: 115px;
+    width: 320px;
+}
+
+.aku-bisa .foto-kegiatan-3-fvZxXA {
+    height: 193px;
+    left: 639px;
+    top: 115px;
+    width: 320px;
+}
+
+.aku-bisa .foto-kegiatan-1-GF1x0M {
+    height: 388px;
+    left: 324px;
+    top: 115px;
+    width: 312px;
+}
+
+.aku-bisa .foto-kegiatan-4-fvZxXA {
+    height: 193px;
+    left: 640px;
+    top: 311px;
+    width: 320px;
+}
+
+.aku-bisa .ulasan-dLgTfx {
+    height: 771px;
+    left: 179px;
+    top: 2923px;
+    width: 1217px;
+}
+
+.aku-bisa .foto-kegiatan-2-jLmOLf {
+    height: 288px;
+    top: 483px;
+    width: 563px;
+}
+
+.aku-bisa .ulasan-jLmOLf {
+    height: 47px;
+    left: 423px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    text-align: center;
+    top: 0px;
+    width: 237px;
+}
+
+.aku-bisa .foto-kegiatan-1-jLmOLf {
+    height: 289px;
+    left: 1px;
+    top: 189px;
+    width: 562px;
+}
+
+.aku-bisa .foto-kegiatan-3-jLmOLf {
+    height: 261px;
+    left: 617px;
+    top: 203px;
+    width: 465px;
+}
+
+.aku-bisa .foto-kegiatan-4-jLmOLf {
+    height: 288px;
+    left: 621px;
+    top: 483px;
+    width: 594px;
+}
+
+.aku-bisa .contact-dLgTfx {
+    background-color: transparent;
+    height: 350px;
+    left: 240px;
+    position: absolute;
+    top: 4066px;
+    width: 960px;
+}
+
+.aku-bisa .rectangle-13-NQ0hlx {
+    background-color: var(--white);
+    height: 350px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 960px;
+}
+
+.aku-bisa .contant__container-NQ0hlx {
+    background-color: transparent;
+    height: 158px;
+    left: 0px;
+    position: absolute;
+    top: 128px;
+    width: 876px;
+}
+
+.aku-bisa .contact__data-y9LWpG {
+    background-color: transparent;
+    height: 158px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 581px;
+}
+
+.aku-bisa .lets-talk-uqXF94 {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: auto;
+}
+
+.aku-bisa .kontak-kami-uqXF94 {
+    background-color: transparent;
+    height: 54px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 32px;
+    width: auto;
+}
+
+.aku-bisa .mari-mengobrol-dan-b-uqXF94 {
+    background-color: transparent;
+    height: 48px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 110px;
+    width: auto;
+}
+
+.aku-bisa .button-y9LWpG {
+    cursor: pointer;
+    height: 50px;
+    left: 703px;
+    top: 47px;
+    width: 173px;
+}
+
+.aku-bisa .rectangle-5-iaGBJ9 {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 50px;
+    position: absolute;
+    width: 173px;
+}
+
+.aku-bisa .group-1-iaGBJ9 {
+    height: 28px;
+    left: 9px;
+    top: 11px;
+    width: 139px;
+}
+
+.aku-bisa .mari-bertanya-vXoa4u {
+    background-color: transparent;
+    height: auto;
+    left: 30px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 4px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.aku-bisa .instagram-logo-240-1-vXoa4u {
+    background-color: transparent;
+    height: 28px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 30px;
+}
+
+.aku-bisa .footer-dLgTfx {
+    background-color: transparent;
+    height: 395px;
+    left: 245px;
+    position: absolute;
+    top: 4416px;
+    width: 962px;
+}
+
+.aku-bisa .rectangle-14-6TkI5r {
+    background-color: var(--white);
+    height: 395px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 960px;
+}
+
+.aku-bisa .x2024-aku-bisa-all-right-reserved-6TkI5r {
+    background-color: transparent;
+    height: 21px;
+    left: 359px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 341px;
+    width: auto;
+}
+
+.aku-bisa .footer__content-6TkI5r {
+    height: 157px;
+    left: 284px;
+    width: 228px;
+}
+
+.aku-bisa .rectangle-16-lFlp0h {
+    height: 157px;
+}
+
+.aku-bisa .layanan-lFlp0h {
+    height: 36px;
+    left: 0px;
+    top: 0px;
+    width: auto;
+}
+
+.aku-bisa .pelayanan-lFlp0h {
+    background-color: transparent;
+    cursor: pointer;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 52px;
+    width: auto;
+}
+
+.aku-bisa .menu-lFlp0h {
+    cursor: pointer;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    text-align: left;
+    top: 84px;
+    width: auto;
+}
+
+.aku-bisa .footer__content-tCjF57 {
+    height: 204px;
+    left: 598px;
+    width: 235px;
+}
+
+.aku-bisa .rectangle-16-wfbSjI {
+    height: 204px;
+}
+
+.aku-bisa .alamat-wfbSjI {
+    background-color: transparent;
+    height: 36px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: auto;
+}
+
+.aku-bisa .ruko-citra-garden-square-wfbSjI {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 52px;
+    width: auto;
+}
+
+.aku-bisa .jl-purwodadi-no-3-blok-r-01-wfbSjI {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 76px;
+    width: auto;
+}
+
+.aku-bisa .kota-pekanbaru-wfbSjI {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 100px;
+    width: auto;
+}
+
+.aku-bisa .x0811-922-7878-wfbSjI {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 124px;
+    width: auto;
+}
+
+.aku-bisa .akubisagmailcom-wfbSjI {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 145px;
+    width: auto;
+}
+
+.aku-bisa .footer__content-xkxY0h {
+    height: 157px;
+    left: 0px;
+    width: 226px;
+}
+
+.aku-bisa .rectangle-15-5CNwq9 {
+    background-color: var(--white);
+    height: 157px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.aku-bisa .aku-bisa-5CNwq9 {
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+.aku-bisa .therapy-center-terbaik-5CNwq9 {
+    background-color: transparent;
+    height: 21px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 34px;
+    width: auto;
+}
+
+.aku-bisa .instagram-logo-240-1-1-5CNwq9 {
+    background-color: transparent;
+    cursor: pointer;
+    height: 36px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 64px;
+    width: 39px;
+}
+
+.aku-bisa .button-6TkI5r {
+    cursor: pointer;
+    height: 28px;
+    left: 39px;
+    top: 174px;
+    width: 173px;
+}
+
+.aku-bisa .rectangle-5-EDxDPY {
+    background-color: var(--blueberry);
+    border-radius: 10px;
+    height: 28px;
+    position: absolute;
+    width: 173px;
+}
+
+.aku-bisa .group-1-EDxDPY {
+    height: 19px;
+    left: 39px;
+    top: 4px;
+    width: 98px;
+}
+
+.aku-bisa .alamat-kami-ULY1Sr {
+    background-color: transparent;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    white-space: nowrap;
+    width: auto;
+}
+
+.aku-bisa .bd-container-dLgTfx {
+    background-color: transparent;
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1456px;
+}
+
+.aku-bisa .rectangle-1-zDhwfA {
+    background-color: var(--white);
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.aku-bisa .rectangle-2-zDhwfA {
+    background-color: var(--white);
+    height: 72px;
+    left: 207px;
+    position: absolute;
+    top: 0px;
+    width: 1026px;
+}
+
+.aku-bisa .rectangle-3-zDhwfA {
+    background-color: var(--white);
+    box-shadow: 0px 4px 4px #0000001a;
+    height: 72px;
+}
+
+.aku-bisa .layanan-zDhwfA {
+    cursor: pointer;
+    height: auto;
+    left: 841px;
+    top: 23px;
+    width: 75px;
+}
+
+.aku-bisa .ulasan-zDhwfA {
+    cursor: pointer;
+    height: auto;
+    left: 1172px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    text-align: left;
+    top: 24px;
+    width: auto;
+}
+
+.aku-bisa .aku-bisa-zDhwfA {
+    height: auto;
+    left: 207px;
+    top: 24px;
+}
+
+.aku-bisa .beranda-zDhwfA {
+    background-color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 618px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 23px;
+    width: auto;
+}
+
+.aku-bisa .tentang-kami-zDhwfA {
+    cursor: pointer;
+    left: 705px;
+    top: 24px;
+    width: auto;
+}
+
+.aku-bisa .terapis-zDhwfA {
+    background-color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 940px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 23px;
+    width: auto;
+}
+
+.aku-bisa .foto-kegiatan-zDhwfA {
+    background-color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 1035px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 24px;
+    width: auto;
+}
+
+.aku-bisa .kontak-zDhwfA {
+    background-color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 1275px;
+    letter-spacing: 0.00px;
+    line-height: normal;
+    position: absolute;
+    text-align: left;
+    top: 24px;
+    width: auto;
+}
+
+.aku-bisa .button-zDhwfA {
+    background: linear-gradient(180deg, rgb(1.0000000591389835, 129.00000751018524, 245.00000059604645) 0%, rgb(93.00000205636024, 178.00000458955765, 255) 100%);
+    border-radius: 4px;
+    height: 32px;
+    left: 310px;
+    top: 20px;
+    width: 99px;
+}
+
+.aku-bisa .login-cRrjoS {
+    background-color: transparent;
+    cursor: pointer;
+    height: 22px;
+    left: 6px;
+    letter-spacing: 0.00px;
+    line-height: 22.5px;
+    position: absolute;
+    text-align: center;
+    top: 4px;
+    white-space: nowrap;
+    width: 88px;
+}
+
+.aku-bisa .button {
+    background-color: transparent;
+    position: absolute;
+}
+
+.aku-bisa .footer__content {
+    background-color: transparent;
+    position: absolute;
+    top: 104px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 80%;
+    height: auto;
+}
+
+.form-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+}
+
+.form-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.icon img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
