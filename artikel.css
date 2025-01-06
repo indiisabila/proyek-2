@@ -1,0 +1,4472 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700|Work+Sans:500,400|Inter:500,400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6757021adec8e05f06cce02f.6757021bdec8e05f06cce032.PXEVeqA.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+    outline: none;
+}
+
+.screen * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.screen div {
+    -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+    display: contents;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.full-width-a {
+    width: 100%;
+}
+
+.full-height-a {
+    height: 100%;
+}
+
+.container-center-vertical {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    pointer-events: none;
+}
+
+.container-center-vertical>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.auto-animated div {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated input {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+    opacity: 1;
+}
+
+.overlay-base {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.overlay-base.animate-appear {
+    align-items: center;
+    animation: reveal 0.3s ease-in-out 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+    display: block;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+    pointer-events: none;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.animate-nodelay {
+    animation-delay: 0s;
+}
+
+.align-self-flex-start {
+    align-self: flex-start;
+}
+
+.align-self-flex-end {
+    align-self: flex-end;
+}
+
+.align-self-flex-center {
+    align-self: flex-center;
+}
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --blueberry: #4c9afe;
+    --cloud: #c4c4c4;
+    --dove-gray: #707070;
+    --gray: #828282;
+    --log-cabin: #222222;
+    --onyx: #393939;
+    --pink-swan: #b7b7b7;
+    --quick-silver: #a6a6a6;
+    --white: #ffffff;
+
+    --font-size-l: 20px;
+    --font-size-m: 16px;
+    --font-size-s: 15px;
+    --font-size-xl: 24px;
+    --font-size-xs: 14px;
+    --font-size-xxl: 32px;
+    --font-size-xxxl: 36px;
+
+    --font-family-inter: "Inter", Helvetica;
+    --font-family-poppins: "Poppins", Helvetica;
+    --font-family-work_sans: "Work Sans", Helvetica;
+}
+
+.subheading {
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.body-text {
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.poppins-medium-dove-gray-16px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-medium-onyx-16px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-semi-bold-onyx-36px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxxl);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.inter-medium-white-16px {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-blueberry-16px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-bold-onyx-24px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-medium-quick-silver-14px {
+    color: var(--quick-silver);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-blueberry-20px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-medium-dove-gray-14px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.worksans-medium-white-15px {
+    color: var(--white);
+    font-family: var(--font-family-work_sans);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.worksans-normal-cloud-16px {
+    color: var(--cloud);
+    font-family: var(--font-family-work_sans);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.poppins-medium-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-black-32px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-semi-bold-blueberry-16px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.poppins-normal-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+:root {}
+
+
+.aku-bisa-1 {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    width: auto;
+}
+
+.foto-kegiatan-1 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-2 {
+    background-color: transparent;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-3 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-4 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.group-1 {
+    background-color: transparent;
+    position: absolute;
+}
+
+.layanan {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+}
+
+.menu {
+    background-color: transparent;
+    position: absolute;
+}
+
+.rectangle-16 {
+    background-color: var(--white);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.rectangle-3 {
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.rectangle-5 {
+    left: 0px;
+    top: 0px;
+}
+
+.tentang-kami {
+    background-color: transparent;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+}
+
+.ulasan {
+    background-color: transparent;
+    position: absolute;
+}
+
+/* screen - artikel-1 */
+
+.artikel-1 {
+    background-color: var(--white);
+    height: 980px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 1440px;
+}
+
+.artikel-1 .bd-container-r5iIGI {
+    background-color: transparent;
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1442px;
+}
+
+.artikel-1 .rectangle-1-IxowaJ {
+    background-color: var(--white);
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.artikel-1 .rectangle-2-IxowaJ {
+    background-color: var(--white);
+    height: 72px;
+    left: 207px;
+    position: absolute;
+    top: 0px;
+    width: 1026px;
+}
+
+.artikel-1 .rectangle-3-IxowaJ {
+    background-color: var(--white);
+    box-shadow: 0px 4px 4px #0000001a;
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.artikel-1 .aku-bisa-IxowaJ {
+    height: auto;
+    left: 163px;
+    top: 24px;
+}
+
+.artikel-1 .back-button-IxowaJ {
+    background-color: transparent;
+    cursor: pointer;
+    height: 26px;
+    left: 107px;
+    position: absolute;
+    top: 23px;
+    width: 26px;
+}
+
+.artikel-1 .ellipse-1-xNXUC2 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--blueberry);
+    border-radius: 13px;
+    height: 26px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 26px;
+}
+
+.artikel-1 .bx-left-arrow-alt-1-xNXUC2 {
+    background-color: transparent;
+    height: 24px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 24px;
+}
+
+.artikel-1 .down-syndrome-adalah-r5iIGI {
+    background-color: transparent;
+    height: 77px;
+    left: 119px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: justify;
+    top: 186px;
+    width: 425px;
+}
+
+.artikel-1 .pengobatan-tidak-ada-r5iIGI {
+    background-color: transparent;
+    height: 77px;
+    left: 627px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: justify;
+    top: 274px;
+    width: 424px;
+}
+
+.artikel-1 .gejala-ciri-ciri-fis-r5iIGI {
+    background-color: transparent;
+    height: 186px;
+    left: 120px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: justify;
+    top: 326px;
+    width: 424px;
+}
+
+.artikel-1 .title-r5iIGI {
+    background-color: transparent;
+    height: 45px;
+    left: 120px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 97px;
+    width: 303px;
+}
+
+.artikel-1 .down-syndrome-r5iIGI {
+    background-color: transparent;
+    height: 45px;
+    left: 120px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 97px;
+    width: 303px;
+}
+
+.artikel-1 .rectangle-7-r5iIGI {
+    background-color: transparent;
+    height: 319px;
+    left: 1107px;
+    object-fit: cover;
+    position: absolute;
+    top: 219px;
+    width: 251px;
+}
+
+.artikel-1 .footer-r5iIGI {
+    background-color: transparent;
+    height: 264px;
+    left: 322px;
+    position: absolute;
+    top: 683px;
+    width: 700px;
+}
+
+.artikel-1 .x2024-aku-bisa-all-right-reserved-4ad68u {
+    background-color: transparent;
+    height: 21px;
+    left: 277px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 243px;
+    width: auto;
+}
+
+.artikel-1 .footer__content-4ad68u {
+    height: 169px;
+    left: 475px;
+    top: 0px;
+    width: 235px;
+}
+
+.artikel-1 .rectangle-16-676kLd {
+    background-color: transparent;
+    height: 157px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.artikel-1 .alamat-676kLd {
+    background-color: transparent;
+    height: 36px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: auto;
+}
+
+.artikel-1 .ruko-citra-garden-square-676kLd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 52px;
+    width: auto;
+}
+
+.artikel-1 .jl-purwodadi-no-3-blok-r-01-676kLd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 76px;
+    width: auto;
+}
+
+.artikel-1 .kota-pekanbaru-676kLd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 100px;
+    width: auto;
+}
+
+.artikel-1 .x0851-7540-0177-676kLd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 124px;
+    width: auto;
+}
+
+.artikel-1 .akubisagmailcom-676kLd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 145px;
+    width: auto;
+}
+
+.artikel-1 .footer__content-1B1ZFc {
+    height: 157px;
+    left: 0px;
+    top: 18px;
+    width: 226px;
+}
+
+.artikel-1 .rectangle-15-Kxgk6D {
+    background-color: var(--white);
+    height: 157px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.artikel-1 .aku-bisa-Kxgk6D {
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+.artikel-1 .therapy-center-terbaik-Kxgk6D {
+    background-color: transparent;
+    height: 21px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 34px;
+    width: auto;
+}
+
+.artikel-1 .instagram-logo-240-1-1-Kxgk6D {
+    background-color: transparent;
+    height: 16px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 79px;
+    width: 16px;
+}
+
+.artikel-1 .footer__content {
+    background-color: transparent;
+    position: absolute;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700|Work+Sans:500,400|Inter:500,400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6757021adec8e05f06cce02f.6757021bdec8e05f06cce032.PXEVeqA.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+    outline: none;
+}
+
+.screen * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.screen div {
+    -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+    display: contents;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.full-width-a {
+    width: 100%;
+}
+
+.full-height-a {
+    height: 100%;
+}
+
+.container-center-vertical {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    pointer-events: none;
+}
+
+.container-center-vertical>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.auto-animated div {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated input {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+    opacity: 1;
+}
+
+.overlay-base {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.overlay-base.animate-appear {
+    align-items: center;
+    animation: reveal 0.3s ease-in-out 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+    display: block;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+    pointer-events: none;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.animate-nodelay {
+    animation-delay: 0s;
+}
+
+.align-self-flex-start {
+    align-self: flex-start;
+}
+
+.align-self-flex-end {
+    align-self: flex-end;
+}
+
+.align-self-flex-center {
+    align-self: flex-center;
+}
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --blueberry: #4c9afe;
+    --cloud: #c4c4c4;
+    --dove-gray: #707070;
+    --gray: #828282;
+    --log-cabin: #222222;
+    --onyx: #393939;
+    --pink-swan: #b7b7b7;
+    --quick-silver: #a6a6a6;
+    --white: #ffffff;
+
+    --font-size-l: 20px;
+    --font-size-m: 16px;
+    --font-size-s: 15px;
+    --font-size-xl: 24px;
+    --font-size-xs: 14px;
+    --font-size-xxl: 32px;
+    --font-size-xxxl: 36px;
+
+    --font-family-inter: "Inter", Helvetica;
+    --font-family-poppins: "Poppins", Helvetica;
+    --font-family-work_sans: "Work Sans", Helvetica;
+}
+
+.subheading {
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.body-text {
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.poppins-medium-dove-gray-16px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-medium-onyx-16px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-semi-bold-onyx-36px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxxl);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.inter-medium-white-16px {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-blueberry-16px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-bold-onyx-24px {
+    color: var(--onyx);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-medium-quick-silver-14px {
+    color: var(--quick-silver);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-blueberry-20px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-medium-dove-gray-14px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.worksans-medium-white-15px {
+    color: var(--white);
+    font-family: var(--font-family-work_sans);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.worksans-normal-cloud-16px {
+    color: var(--cloud);
+    font-family: var(--font-family-work_sans);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.poppins-medium-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.poppins-bold-black-32px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxl);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.poppins-semi-bold-blueberry-16px {
+    color: var(--blueberry);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.poppins-normal-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+:root {}
+
+
+.aku-bisa-1 {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    width: auto;
+}
+
+.foto-kegiatan-1 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-2 {
+    background-color: transparent;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-3 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.foto-kegiatan-4 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.group-1 {
+    background-color: transparent;
+    position: absolute;
+}
+
+.layanan {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+}
+
+.menu {
+    background-color: transparent;
+    position: absolute;
+}
+
+.rectangle-16 {
+    background-color: var(--white);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.rectangle-3 {
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.rectangle-5 {
+    left: 0px;
+    top: 0px;
+}
+
+.tentang-kami {
+    background-color: transparent;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+}
+
+.ulasan {
+    background-color: transparent;
+    position: absolute;
+}
+
+/* screen - artikel-2 */
+
+.artikel-2 {
+    background-color: var(--white);
+    height: 1024px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 1440px;
+}
+
+.artikel-2 .bd-container-I4WasV {
+    background-color: transparent;
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1442px;
+}
+
+.artikel-2 .rectangle-1-bxCGXR {
+    background-color: var(--white);
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.artikel-2 .rectangle-2-bxCGXR {
+    background-color: var(--white);
+    height: 72px;
+    left: 207px;
+    position: absolute;
+    top: 0px;
+    width: 1026px;
+}
+
+.artikel-2 .rectangle-3-bxCGXR {
+    background-color: var(--white);
+    box-shadow: 0px 4px 4px #0000001a;
+    height: 72px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+
+.artikel-2 .aku-bisa-bxCGXR {
+    height: auto;
+    left: 163px;
+    top: 24px;
+}
+
+.artikel-2 .back-button-bxCGXR {
+    background-color: transparent;
+    cursor: pointer;
+    height: 26px;
+    left: 107px;
+    position: absolute;
+    top: 23px;
+    width: 26px;
+}
+
+.artikel-2 .ellipse-1-1Ldrew {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--blueberry);
+    border-radius: 13px;
+    height: 26px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 26px;
+}
+
+.artikel-2 .bx-left-arrow-alt-1-1Ldrew {
+    background-color: transparent;
+    height: 24px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 24px;
+}
+
+.artikel-2 .title-I4WasV {
+    background-color: transparent;
+    height: 45px;
+    left: 108px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 103px;
+    width: 303px;
+}
+
+.artikel-2 .autisme-I4WasV {
+    background-color: transparent;
+    height: 45px;
+    left: 108px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 103px;
+    width: 303px;
+}
+
+.artikel-2 .gejala-autisme-sebag-I4WasV {
+    background-color: transparent;
+    height: 319px;
+    left: 108px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: justify;
+    top: 298px;
+    width: 424px;
+}
+
+.artikel-2 .pengobatan-tidak-ada-I4WasV {
+    background-color: transparent;
+    height: 430px;
+    left: 616px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: justify;
+    top: 170px;
+    width: 429px;
+}
+
+.artikel-2 .rectangle-7-I4WasV {
+    background-color: transparent;
+    height: 319px;
+    left: 1102px;
+    object-fit: cover;
+    position: absolute;
+    top: 208px;
+    width: 251px;
+}
+
+.artikel-2 .x2024-aku-bisa-all-right-reserved-I4WasV {
+    background-color: transparent;
+    height: 21px;
+    left: 583px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 972px;
+    width: auto;
+}
+
+.artikel-2 .footer__content-I4WasV {
+    height: 169px;
+    left: 781px;
+    top: 730px;
+    width: 235px;
+}
+
+.artikel-2 .rectangle-16-G0y3Hd {
+    background-color: transparent;
+    height: 157px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.artikel-2 .alamat-G0y3Hd {
+    background-color: transparent;
+    height: 36px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 0px;
+    width: auto;
+}
+
+.artikel-2 .ruko-citra-garden-square-G0y3Hd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 52px;
+    width: auto;
+}
+
+.artikel-2 .jl-purwodadi-no-3-blok-r-01-G0y3Hd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 76px;
+    width: auto;
+}
+
+.artikel-2 .kota-pekanbaru-G0y3Hd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 100px;
+    width: auto;
+}
+
+.artikel-2 .x0851-7540-0177-G0y3Hd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 124px;
+    width: auto;
+}
+
+.artikel-2 .akubisagmailcom-G0y3Hd {
+    background-color: transparent;
+    height: 24px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 145px;
+    width: auto;
+}
+
+.artikel-2 .footer__content-FDMjVx {
+    height: 157px;
+    left: 306px;
+    top: 748px;
+    width: 226px;
+}
+
+.artikel-2 .rectangle-15-VGxnrD {
+    background-color: var(--white);
+    height: 157px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 222px;
+}
+
+.artikel-2 .aku-bisa-VGxnrD {
+    height: 30px;
+    left: 0px;
+    top: 0px;
+}
+
+.artikel-2 .therapy-center-terbaik-VGxnrD {
+    background-color: transparent;
+    height: 21px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: left;
+    top: 34px;
+    width: auto;
+}
+
+.artikel-2 .instagram-logo-240-1-1-VGxnrD {
+    background-color: transparent;
+    height: 16px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 79px;
+    width: 16px;
+}
+
+.artikel-2 .anak-autis-atau-auti {
+    background-color: transparent;
+    height: 167px;
+    left: 108px;
+    letter-spacing: 0.00px;
+    line-height: Truepx;
+    position: absolute;
+    text-align: justify;
+    top: 148px;
+    width: 428px;
+}
+
+.artikel-2 .footer__content {
+    background-color: transparent;
+    position: absolute;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+        @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700|Work+Sans:500,400|Inter:500,400");
+
+        /* The following line is used to measure usage of this code. You can remove it if you want. */
+        @import url("https://px.animaapp.com/6757021adec8e05f06cce02f.6757021bdec8e05f06cce032.PXEVeqA.hch.png");
+
+
+        .screen textarea:focus,
+        .screen input:focus {
+            outline: none;
+        }
+
+        .screen * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+
+        .screen div {
+            -webkit-text-size-adjust: none;
+        }
+
+        .component-wrapper a {
+            display: contents;
+            pointer-events: auto;
+            text-decoration: none;
+        }
+
+        .component-wrapper * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+
+        .component-wrapper a *,
+        .component-wrapper input,
+        .component-wrapper video,
+        .component-wrapper iframe {
+            pointer-events: auto;
+        }
+
+        .component-wrapper.not-ready,
+        .component-wrapper.not-ready * {
+            visibility: hidden !important;
+        }
+
+        .screen a {
+            display: contents;
+            text-decoration: none;
+        }
+
+        .full-width-a {
+            width: 100%;
+        }
+
+        .full-height-a {
+            height: 100%;
+        }
+
+        .container-center-vertical {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .container-center-vertical>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+
+        .container-center-horizontal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            pointer-events: none;
+            width: 100%;
+        }
+
+        .container-center-horizontal>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+
+        .auto-animated div {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .auto-animated input {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .auto-animated .container-center-vertical,
+        .auto-animated .container-center-horizontal {
+            opacity: 1;
+        }
+
+        .overlay-base {
+            display: none;
+            height: 100%;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .overlay-base.animate-appear {
+            align-items: center;
+            animation: reveal 0.3s ease-in-out 1 normal forwards;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+        }
+
+        .overlay-base.animate-disappear {
+            animation: reveal 0.3s ease-in-out 1 reverse forwards;
+            display: block;
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .overlay-base.animate-disappear * {
+            pointer-events: none;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .animate-nodelay {
+            animation-delay: 0s;
+        }
+
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+
+        .align-self-flex-center {
+            align-self: flex-center;
+        }
+
+        .valign-text-middle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .valign-text-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .listeners-active,
+        .listeners-active * {
+            pointer-events: auto;
+        }
+
+        .hidden,
+        .hidden * {
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        .smart-layers-pointers,
+        .smart-layers-pointers * {
+            pointer-events: auto;
+            visibility: visible;
+        }
+
+        .listeners-active-click,
+        .listeners-active-click * {
+            cursor: pointer;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --blueberry: #4c9afe;
+            --cloud: #c4c4c4;
+            --dove-gray: #707070;
+            --gray: #828282;
+            --log-cabin: #222222;
+            --onyx: #393939;
+            --pink-swan: #b7b7b7;
+            --quick-silver: #a6a6a6;
+            --white: #ffffff;
+
+            --font-size-l: 20px;
+            --font-size-m: 16px;
+            --font-size-s: 15px;
+            --font-size-xl: 24px;
+            --font-size-xs: 14px;
+            --font-size-xxl: 32px;
+            --font-size-xxxl: 36px;
+
+            --font-family-inter: "Inter", Helvetica;
+            --font-family-poppins: "Poppins", Helvetica;
+            --font-family-work_sans: "Work Sans", Helvetica;
+        }
+
+        .subheading {
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0px;
+        }
+
+        .body-text {
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-l);
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 0px;
+        }
+
+        .poppins-medium-dove-gray-16px {
+            color: var(--dove-gray);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-medium-onyx-16px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-semi-bold-onyx-36px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xxxl);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .inter-medium-white-16px {
+            color: var(--white);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-bold-blueberry-16px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-bold-onyx-24px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-bold-blueberry-20px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-l);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-medium-dove-gray-14px {
+            color: var(--dove-gray);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xs);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-medium-quick-silver-14px {
+            color: var(--quick-silver);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xs);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .worksans-medium-white-15px {
+            color: var(--white);
+            font-family: var(--font-family-work_sans);
+            font-size: var(--font-size-s);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .worksans-normal-cloud-16px {
+            color: var(--cloud);
+            font-family: var(--font-family-work_sans);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .poppins-medium-black-16px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-bold-black-32px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xxl);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-semi-bold-blueberry-16px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .poppins-normal-black-16px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        :root {}
+
+
+        .aku-bisa-1 {
+            background-color: transparent;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            width: auto;
+        }
+
+        .foto-kegiatan-1 {
+            background-color: transparent;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .foto-kegiatan-2 {
+            background-color: transparent;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .foto-kegiatan-3 {
+            background-color: transparent;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .foto-kegiatan-4 {
+            background-color: transparent;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .group-1 {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        .layanan {
+            background-color: transparent;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+        }
+
+        .menu {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        .rectangle-16 {
+            background-color: var(--white);
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 222px;
+        }
+
+        .rectangle-3 {
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .rectangle-5 {
+            left: 0px;
+            top: 0px;
+        }
+
+        .tentang-kami {
+            background-color: transparent;
+            height: auto;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+        }
+
+        .ulasan {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        /* screen - artikel-3 */
+
+        .artikel-3 {
+            background-color: var(--white);
+            height: 1024px;
+            overflow: hidden;
+            overflow-x: hidden;
+            position: relative;
+            width: 1440px;
+        }
+
+        .artikel-3 .bd-container-fx7SsI {
+            background-color: transparent;
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1442px;
+        }
+
+        .artikel-3 .rectangle-1-Gbfgu6 {
+            background-color: var(--white);
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .artikel-3 .rectangle-2-Gbfgu6 {
+            background-color: var(--white);
+            height: 72px;
+            left: 207px;
+            position: absolute;
+            top: 0px;
+            width: 1026px;
+        }
+
+        .artikel-3 .rectangle-3-Gbfgu6 {
+            background-color: var(--white);
+            box-shadow: 0px 4px 4px #0000001a;
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .artikel-3 .aku-bisa-Gbfgu6 {
+            height: auto;
+            left: 163px;
+            top: 24px;
+        }
+
+        .artikel-3 .back-button-Gbfgu6 {
+            background-color: transparent;
+            cursor: pointer;
+            height: 26px;
+            left: 107px;
+            position: absolute;
+            top: 23px;
+            width: 26px;
+        }
+
+        .artikel-3 .ellipse-1-S3DxMS {
+            background-color: transparent;
+            border: 2px solid;
+            border-color: var(--blueberry);
+            border-radius: 13px;
+            height: 26px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 26px;
+        }
+
+        .artikel-3 .bx-left-arrow-alt-1-S3DxMS {
+            background-color: transparent;
+            height: 24px;
+            left: 1px;
+            position: absolute;
+            top: 1px;
+            width: 24px;
+        }
+
+        .artikel-3 .title-fx7SsI {
+            background-color: transparent;
+            height: 45px;
+            left: 107px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 111px;
+            width: 303px;
+        }
+
+        .artikel-3 .attention-deficit-hy-fx7SsI {
+            background-color: transparent;
+            height: 167px;
+            left: 107px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 182px;
+            width: 428px;
+        }
+
+        .artikel-3 .gejala-adhd-umumnya-fx7SsI {
+            background-color: transparent;
+            height: 319px;
+            left: 108px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 370px;
+            width: 424px;
+        }
+
+        .artikel-3 .pengobatan-meskipun-fx7SsI {
+            background-color: transparent;
+            height: 430px;
+            left: 616px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 170px;
+            width: 429px;
+        }
+
+        .artikel-3 .rectangle-7-fx7SsI {
+            background-color: transparent;
+            height: 319px;
+            left: 1107px;
+            object-fit: cover;
+            position: absolute;
+            top: 208px;
+            width: 251px;
+        }
+
+        .artikel-3 .footer__content-fx7SsI {
+            height: 157px;
+            left: 288px;
+            top: 763px;
+            width: 226px;
+        }
+
+        .artikel-3 .rectangle-15-EAb5Ms {
+            background-color: var(--white);
+            height: 157px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 222px;
+        }
+
+        .artikel-3 .aku-bisa-EAb5Ms {
+            height: 30px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .artikel-3 .therapy-center-terbaik-EAb5Ms {
+            background-color: transparent;
+            height: 21px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 34px;
+            width: auto;
+        }
+
+        .artikel-3 .instagram-logo-240-1-1-EAb5Ms {
+            background-color: transparent;
+            height: 16px;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+            top: 79px;
+            width: 16px;
+        }
+
+        .artikel-3 .footer__content-NGAlio {
+            height: 169px;
+            left: 760px;
+            top: 745px;
+            width: 235px;
+        }
+
+        .artikel-3 .rectangle-16-9JWs01 {
+            background-color: transparent;
+            height: 157px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 222px;
+        }
+
+        .artikel-3 .alamat-9JWs01 {
+            background-color: transparent;
+            height: 36px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: auto;
+        }
+
+        .artikel-3 .ruko-citra-garden-square-9JWs01 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 52px;
+            width: auto;
+        }
+
+        .artikel-3 .jl-purwodadi-no-3-blok-r-01-9JWs01 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 76px;
+            width: auto;
+        }
+
+        .artikel-3 .kota-pekanbaru-9JWs01 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 100px;
+            width: auto;
+        }
+
+        .artikel-3 .x0851-7540-0177-9JWs01 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 124px;
+            width: auto;
+        }
+
+        .artikel-3 .akubisagmailcom-9JWs01 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 145px;
+            width: auto;
+        }
+
+        .artikel-3 .x2024-aku-bisa-all-right-reserved-fx7SsI {
+            background-color: transparent;
+            height: 21px;
+            left: 568px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 974px;
+            width: auto;
+        }
+
+        .artikel-3 .footer__content {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+        @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700|Work+Sans:500,400|Inter:500,400");
+
+        /* The following line is used to measure usage of this code. You can remove it if you want. */
+        @import url("https://px.animaapp.com/6757021adec8e05f06cce02f.6757021bdec8e05f06cce032.PXEVeqA.hch.png");
+
+
+        .screen textarea:focus,
+        .screen input:focus {
+            outline: none;
+        }
+
+        .screen * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+
+        .screen div {
+            -webkit-text-size-adjust: none;
+        }
+
+        .component-wrapper a {
+            display: contents;
+            pointer-events: auto;
+            text-decoration: none;
+        }
+
+        .component-wrapper * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+
+        .component-wrapper a *,
+        .component-wrapper input,
+        .component-wrapper video,
+        .component-wrapper iframe {
+            pointer-events: auto;
+        }
+
+        .component-wrapper.not-ready,
+        .component-wrapper.not-ready * {
+            visibility: hidden !important;
+        }
+
+        .screen a {
+            display: contents;
+            text-decoration: none;
+        }
+
+        .full-width-a {
+            width: 100%;
+        }
+
+        .full-height-a {
+            height: 100%;
+        }
+
+        .container-center-vertical {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .container-center-vertical>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+
+        .container-center-horizontal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            pointer-events: none;
+            width: 100%;
+        }
+
+        .container-center-horizontal>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+
+        .auto-animated div {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .auto-animated input {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .auto-animated .container-center-vertical,
+        .auto-animated .container-center-horizontal {
+            opacity: 1;
+        }
+
+        .overlay-base {
+            display: none;
+            height: 100%;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .overlay-base.animate-appear {
+            align-items: center;
+            animation: reveal 0.3s ease-in-out 1 normal forwards;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+        }
+
+        .overlay-base.animate-disappear {
+            animation: reveal 0.3s ease-in-out 1 reverse forwards;
+            display: block;
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .overlay-base.animate-disappear * {
+            pointer-events: none;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .animate-nodelay {
+            animation-delay: 0s;
+        }
+
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+
+        .align-self-flex-center {
+            align-self: flex-center;
+        }
+
+        .valign-text-middle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .valign-text-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .listeners-active,
+        .listeners-active * {
+            pointer-events: auto;
+        }
+
+        .hidden,
+        .hidden * {
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        .smart-layers-pointers,
+        .smart-layers-pointers * {
+            pointer-events: auto;
+            visibility: visible;
+        }
+
+        .listeners-active-click,
+        .listeners-active-click * {
+            cursor: pointer;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --blueberry: #4c9afe;
+            --cloud: #c4c4c4;
+            --dove-gray: #707070;
+            --gray: #828282;
+            --log-cabin: #222222;
+            --onyx: #393939;
+            --pink-swan: #b7b7b7;
+            --quick-silver: #a6a6a6;
+            --white: #ffffff;
+
+            --font-size-l: 20px;
+            --font-size-m: 16px;
+            --font-size-s: 15px;
+            --font-size-xl: 24px;
+            --font-size-xs: 14px;
+            --font-size-xxl: 32px;
+            --font-size-xxxl: 36px;
+
+            --font-family-inter: "Inter", Helvetica;
+            --font-family-poppins: "Poppins", Helvetica;
+            --font-family-work_sans: "Work Sans", Helvetica;
+        }
+
+        .subheading {
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0px;
+        }
+
+        .body-text {
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-l);
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 0px;
+        }
+
+        .poppins-medium-dove-gray-16px {
+            color: var(--dove-gray);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-medium-onyx-16px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-semi-bold-onyx-36px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xxxl);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .inter-medium-white-16px {
+            color: var(--white);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-bold-blueberry-16px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-bold-onyx-24px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-bold-blueberry-20px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-l);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-medium-dove-gray-14px {
+            color: var(--dove-gray);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xs);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-medium-quick-silver-14px {
+            color: var(--quick-silver);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xs);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .worksans-medium-white-15px {
+            color: var(--white);
+            font-family: var(--font-family-work_sans);
+            font-size: var(--font-size-s);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .worksans-normal-cloud-16px {
+            color: var(--cloud);
+            font-family: var(--font-family-work_sans);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .poppins-medium-black-16px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-bold-black-32px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xxl);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-semi-bold-blueberry-16px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .poppins-normal-black-16px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        :root {}
+
+
+        .aku-bisa-1 {
+            background-color: transparent;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            width: auto;
+        }
+
+        .foto-kegiatan-1 {
+            background-color: transparent;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .foto-kegiatan-2 {
+            background-color: transparent;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .foto-kegiatan-3 {
+            background-color: transparent;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .foto-kegiatan-4 {
+            background-color: transparent;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .group-1 {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        .layanan {
+            background-color: transparent;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+        }
+
+        .menu {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        .rectangle-16 {
+            background-color: var(--white);
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 222px;
+        }
+
+        .rectangle-3 {
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .rectangle-5 {
+            left: 0px;
+            top: 0px;
+        }
+
+        .tentang-kami {
+            background-color: transparent;
+            height: auto;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+        }
+
+        .ulasan {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        /* screen - artikel-4-1 */
+
+        .artikel-4-1 {
+            background-color: var(--white);
+            height: 1024px;
+            overflow: hidden;
+            overflow-x: hidden;
+            position: relative;
+            width: 1440px;
+        }
+
+        .artikel-4-1 .bd-container-dhYy94 {
+            background-color: transparent;
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1442px;
+        }
+
+        .artikel-4-1 .rectangle-1-vdW6gD {
+            background-color: var(--white);
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .artikel-4-1 .rectangle-2-vdW6gD {
+            background-color: var(--white);
+            height: 72px;
+            left: 207px;
+            position: absolute;
+            top: 0px;
+            width: 1026px;
+        }
+
+        .artikel-4-1 .rectangle-3-vdW6gD {
+            background-color: var(--white);
+            box-shadow: 0px 4px 4px #0000001a;
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .artikel-4-1 .aku-bisa-vdW6gD {
+            height: auto;
+            left: 163px;
+            top: 24px;
+        }
+
+        .artikel-4-1 .back-button-vdW6gD {
+            background-color: transparent;
+            cursor: pointer;
+            height: 26px;
+            left: 107px;
+            position: absolute;
+            top: 23px;
+            width: 26px;
+        }
+
+        .artikel-4-1 .ellipse-1-xfkoSn {
+            background-color: transparent;
+            border: 2px solid;
+            border-color: var(--blueberry);
+            border-radius: 13px;
+            height: 26px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 26px;
+        }
+
+        .artikel-4-1 .bx-left-arrow-alt-1-xfkoSn {
+            background-color: transparent;
+            height: 24px;
+            left: 1px;
+            position: absolute;
+            top: 1px;
+            width: 24px;
+        }
+
+        .artikel-4-1 .title-dhYy94 {
+            background-color: transparent;
+            height: 45px;
+            left: 107px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 111px;
+            width: 303px;
+        }
+
+        .artikel-4-1 .disleksia-ialah-meng-dhYy94 {
+            background-color: transparent;
+            height: 167px;
+            left: 107px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 182px;
+            width: 428px;
+        }
+
+        .artikel-4-1 .pengobatan-latihan-f-dhYy94 {
+            background-color: transparent;
+            height: 430px;
+            left: 629px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 81px;
+            width: 429px;
+        }
+
+        .artikel-4-1 .rectangle-7-dhYy94 {
+            background-color: transparent;
+            height: 319px;
+            left: 1107px;
+            object-fit: cover;
+            position: absolute;
+            top: 184px;
+            width: 251px;
+        }
+
+        .artikel-4-1 .footer__content-dhYy94 {
+            height: 157px;
+            left: 688px;
+            top: 775px;
+            width: 226px;
+        }
+
+        .artikel-4-1 .rectangle-15-wKiKkZ {
+            background-color: var(--white);
+            height: 157px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 222px;
+        }
+
+        .artikel-4-1 .aku-bisa-wKiKkZ {
+            height: 30px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .artikel-4-1 .therapy-center-terbaik-wKiKkZ {
+            background-color: transparent;
+            height: 21px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 34px;
+            width: auto;
+        }
+
+        .artikel-4-1 .instagram-logo-240-1-1-wKiKkZ {
+            background-color: transparent;
+            height: 16px;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+            top: 79px;
+            width: 16px;
+        }
+
+        .artikel-4-1 .footer__content-HNWYvx {
+            height: 169px;
+            left: 1029px;
+            top: 769px;
+            width: 235px;
+        }
+
+        .artikel-4-1 .rectangle-16-uf5TR2 {
+            background-color: transparent;
+            height: 157px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 222px;
+        }
+
+        .artikel-4-1 .alamat-uf5TR2 {
+            background-color: transparent;
+            height: 36px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: auto;
+        }
+
+        .artikel-4-1 .ruko-citra-garden-square-uf5TR2 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 52px;
+            width: auto;
+        }
+
+        .artikel-4-1 .jl-purwodadi-no-3-blok-r-01-uf5TR2 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 76px;
+            width: auto;
+        }
+
+        .artikel-4-1 .kota-pekanbaru-uf5TR2 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 100px;
+            width: auto;
+        }
+
+        .artikel-4-1 .x0851-7540-0177-uf5TR2 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 124px;
+            width: auto;
+        }
+
+        .artikel-4-1 .akubisagmailcom-uf5TR2 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 145px;
+            width: auto;
+        }
+
+        .artikel-4-1 .x2024-aku-bisa-all-right-reserved-dhYy94 {
+            background-color: transparent;
+            height: 21px;
+            left: 568px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 974px;
+            width: auto;
+        }
+
+        .artikel-4-1 .gejala-kesulitan-dal-dhYy94 {
+            background-color: transparent;
+            height: 543px;
+            left: 89px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 359px;
+            width: 513px;
+        }
+
+        .artikel-4-1 .footer__content {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+        @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,800,500,700|Work+Sans:500,400|Inter:500,400");
+
+        .component-wrapper a {
+            display: contents;
+            pointer-events: auto;
+            text-decoration: none;
+        }
+
+        .component-wrapper * {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+
+        .component-wrapper a *,
+        .component-wrapper input,
+        .component-wrapper video,
+        .component-wrapper iframe {
+            pointer-events: auto;
+        }
+
+        .component-wrapper.not-ready,
+        .component-wrapper.not-ready * {
+            visibility: hidden !important;
+        }
+
+        .screen a {
+            display: contents;
+            text-decoration: none;
+        }
+
+        .full-width-a {
+            width: 100%;
+        }
+
+        .full-height-a {
+            height: 100%;
+        }
+
+        .container-center-vertical {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .container-center-vertical>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+
+        .container-center-horizontal {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            pointer-events: none;
+            width: 100%;
+        }
+
+        .container-center-horizontal>* {
+            flex-shrink: 0;
+            pointer-events: auto;
+        }
+
+        .auto-animated div {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .auto-animated input {
+            --z-index: -1;
+            opacity: 0;
+            position: absolute;
+        }
+
+        .auto-animated .container-center-vertical,
+        .auto-animated .container-center-horizontal {
+            opacity: 1;
+        }
+
+        .overlay-base {
+            display: none;
+            height: 100%;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .overlay-base.animate-appear {
+            align-items: center;
+            animation: reveal 0.3s ease-in-out 1 normal forwards;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+        }
+
+        .overlay-base.animate-disappear {
+            animation: reveal 0.3s ease-in-out 1 reverse forwards;
+            display: block;
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .overlay-base.animate-disappear * {
+            pointer-events: none;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .animate-nodelay {
+            animation-delay: 0s;
+        }
+
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+
+        .align-self-flex-center {
+            align-self: flex-center;
+        }
+
+        .valign-text-middle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .valign-text-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .listeners-active,
+        .listeners-active * {
+            pointer-events: auto;
+        }
+
+        .hidden,
+        .hidden * {
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        .smart-layers-pointers,
+        .smart-layers-pointers * {
+            pointer-events: auto;
+            visibility: visible;
+        }
+
+        .listeners-active-click,
+        .listeners-active-click * {
+            cursor: pointer;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --blueberry: #4c9afe;
+            --cloud: #c4c4c4;
+            --dove-gray: #707070;
+            --gray: #828282;
+            --log-cabin: #222222;
+            --onyx: #393939;
+            --pink-swan: #b7b7b7;
+            --quick-silver: #a6a6a6;
+            --white: #ffffff;
+
+            --font-size-l: 20px;
+            --font-size-m: 16px;
+            --font-size-s: 15px;
+            --font-size-xl: 24px;
+            --font-size-xs: 14px;
+            --font-size-xxl: 32px;
+            --font-size-xxxl: 36px;
+
+            --font-family-inter: "Inter", Helvetica;
+            --font-family-poppins: "Poppins", Helvetica;
+            --font-family-work_sans: "Work Sans", Helvetica;
+        }
+
+        .subheading {
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 400;
+            letter-spacing: 0px;
+        }
+
+        .body-text {
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-l);
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 0px;
+        }
+
+        .poppins-medium-dove-gray-16px {
+            color: var(--dove-gray);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-medium-onyx-16px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-semi-bold-onyx-36px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xxxl);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .inter-medium-white-16px {
+            color: var(--white);
+            font-family: var(--font-family-inter);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-bold-blueberry-16px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-bold-onyx-24px {
+            color: var(--onyx);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xl);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-bold-blueberry-20px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-l);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-medium-dove-gray-14px {
+            color: var(--dove-gray);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xs);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-medium-quick-silver-14px {
+            color: var(--quick-silver);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xs);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .worksans-medium-white-15px {
+            color: var(--white);
+            font-family: var(--font-family-work_sans);
+            font-size: var(--font-size-s);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .worksans-normal-cloud-16px {
+            color: var(--cloud);
+            font-family: var(--font-family-work_sans);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .poppins-medium-black-16px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .poppins-bold-black-32px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xxl);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .poppins-semi-bold-blueberry-16px {
+            color: var(--blueberry);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .poppins-normal-black-16px {
+            color: var(--black);
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+
+        .buat-password {
+            background-color: transparent;
+            height: 19px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: -1px;
+            width: 120px;
+        }
+
+        .bd-container {
+            background-color: transparent;
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1442px;
+        }
+
+        .back-button {
+            background-color: transparent;
+            border: 2px solid;
+            border-color: var(--blueberry);
+            border-radius: 13px;
+            cursor: pointer;
+            height: 26px;
+            left: 107px;
+            position: absolute;
+            top: 23px;
+            width: 26px;
+        }
+
+        .bx-left-arrow-alt-1 {
+            background-color: transparent;
+            height: 24px;
+            left: -1px;
+            position: absolute;
+            top: -1px;
+            width: 24px;
+        }
+
+        .container-2 {
+            background-color: transparent;
+            height: 19px;
+            left: 16px;
+            overflow: hidden;
+            position: relative;
+            top: 20px;
+        }
+
+        .aku-bisa-1 {
+            background-color: transparent;
+            height: 30px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: auto;
+        }
+
+        .therapy-center-terbaik {
+            background-color: transparent;
+            height: 21px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 34px;
+            width: auto;
+        }
+
+        .alamat {
+            background-color: transparent;
+            height: 36px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: auto;
+        }
+
+        .ruko-citra-garden-square {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 52px;
+            width: auto;
+        }
+
+        .jl-purwodadi-no-3-blok-r-01 {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 76px;
+            width: auto;
+        }
+
+        .kota-pekanbaru {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 100px;
+            width: auto;
+        }
+
+        .akubisagmailcom {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 145px;
+            width: auto;
+        }
+
+        .overlap-group7 {
+            background-color: transparent;
+            height: 640px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1456px;
+        }
+
+        .home {
+            background-color: transparent;
+            background-image: url(https://cdn.animaapp.com/projects/6757021cdec8e05f06cce034/releases/6757038a191b26897c86e1e7/img/rectangle-3.png);
+            background-position: 50% 50%;
+            background-size: cover;
+            height: 640px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .bawa-aku-bisa-untuk {
+            background-color: transparent;
+            color: #f4f4f4;
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-xxxl);
+            font-style: normal;
+            font-weight: 600;
+            height: auto;
+            left: 292px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 256px;
+            width: 601px;
+        }
+
+        .daftar-observasi-anak {
+            background-color: transparent;
+            height: 22px;
+            left: 19px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: center;
+            top: 20px;
+            white-space: nowrap;
+            width: 173px;
+        }
+
+        .navbar {
+            background-color: var(--white);
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .navbar-link-layanan {
+            left: 841px;
+            top: 23px;
+            width: 75px;
+        }
+
+        .navbar-link-foto-kegiatan {
+            background-color: transparent;
+            cursor: pointer;
+            height: auto;
+            left: 1035px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 24px;
+            width: auto;
+        }
+
+        .rectangle-6 {
+            background-color: var(--white);
+            height: 525px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 960px;
+        }
+
+        .rectangle-8 {
+            background-color: var(--white);
+            height: 378px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 960px;
+        }
+
+        .about__data {
+            background-color: transparent;
+            height: 281px;
+            left: 536px;
+            position: absolute;
+            top: 75px;
+            width: 430px;
+        }
+
+        .tentang-kami {
+            background-color: transparent;
+            color: transparent;
+            font-family: var(--font-family-poppins);
+            font-size: var(--font-size-m);
+            font-style: normal;
+            font-weight: 600;
+            height: auto;
+            left: 1px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: 115px;
+        }
+
+        .span0 {
+            font-style: normal;
+        }
+
+        .span2 {
+            color: #3eadf8;
+            font-style: normal;
+        }
+
+        .selamat-datang-di-website-aku-bisa {
+            background-color: transparent;
+            height: 159px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 29px;
+            width: 424px;
+        }
+
+        .aku-bisa-adalah-sebu {
+            background-color: transparent;
+            height: 71px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 211px;
+            width: 424px;
+        }
+
+        .services {
+            background-color: transparent;
+            height: 504px;
+            left: 240px;
+            position: absolute;
+            top: 1499px;
+            width: 964px;
+        }
+
+        .rectangle-10 {
+            background-color: var(--white);
+            height: 504px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 960px;
+        }
+
+        .rectangle-5 {
+            background-color: var(--blueberry);
+            border-radius: 10px;
+            height: 60px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 174px;
+        }
+
+        .gangguan-disaudia {
+            left: 11px;
+            width: 168px;
+        }
+
+        .gdd {
+            background-color: transparent;
+            height: auto;
+            left: 39px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 21px;
+            width: 53px;
+        }
+
+        .disleksia {
+            background-color: transparent;
+            height: auto;
+            left: 28px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 17px;
+            width: 94px;
+        }
+
+        .overlap-group1-1 {
+            height: 60px;
+            left: 695px;
+            top: 364px;
+            width: 179px;
+        }
+
+        .group-1 {
+            background-color: transparent;
+            cursor: pointer;
+            height: 23px;
+            left: 9px;
+            position: absolute;
+            top: 17px;
+            width: 170px;
+        }
+
+        .intelectual-disability {
+            background-color: transparent;
+            height: auto;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: 168px;
+        }
+
+        .celebral-palsy {
+            background-color: transparent;
+            height: auto;
+            left: 26px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 19px;
+            width: 141px;
+        }
+
+        .terlambat-bicara {
+            background-color: transparent;
+            height: auto;
+            left: 16px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 17px;
+            width: 141px;
+        }
+
+        .down-syndrom {
+            background-color: transparent;
+            height: auto;
+            left: 18px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 18px;
+            width: 124px;
+        }
+
+        .melayani-gangguan-anak {
+            background-color: transparent;
+            height: 66px;
+            left: 228px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: center;
+            top: 71px;
+            width: 496px;
+        }
+
+        .adhd {
+            background-color: transparent;
+            color: var(--white);
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 500;
+            height: 29px;
+            left: 227px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: center;
+            top: 279px;
+            width: 58px;
+        }
+
+        .gangguan-belajar {
+            left: 14px;
+            width: 143px;
+        }
+
+        .rectangle-5-1 {
+            background-color: var(--blueberry);
+            border-radius: 10px;
+            cursor: pointer;
+            height: 59px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 122px;
+        }
+
+        .autis {
+            background-color: transparent;
+            height: auto;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: center;
+            top: 18px;
+            width: 122px;
+        }
+
+        .menu {
+            background-color: transparent;
+            height: 504px;
+            left: 240px;
+            position: absolute;
+            top: 2115px;
+            width: 964px;
+        }
+
+        .foto-kegiatan-container {
+            height: 388px;
+            left: 0px;
+            top: 0px;
+            width: 321px;
+        }
+
+        .foto-kegiatan-2 {
+            height: 193px;
+            left: 0px;
+            object-fit: cover;
+            top: 196px;
+            width: 320px;
+        }
+
+        .foto-kegiatan-1 {
+            height: 193px;
+            left: 1px;
+            object-fit: cover;
+            top: 0px;
+            width: 320px;
+        }
+
+        .foto-kegiatan-container-1 {
+            height: 388px;
+            left: 639px;
+            top: 0px;
+            width: 321px;
+        }
+
+        .foto-kegiatan-3 {
+            height: 193px;
+            left: 0px;
+            object-fit: cover;
+            top: 0px;
+            width: 320px;
+        }
+
+        .foto-kegiatan-4 {
+            height: 193px;
+            left: 1px;
+            object-fit: cover;
+            top: 196px;
+            width: 320px;
+        }
+
+        .foto-kegiatan-1-1 {
+            height: 388px;
+            left: 324px;
+            width: 312px;
+        }
+
+        .foto {
+            background-color: transparent;
+            height: 31px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: center;
+            top: 0px;
+            white-space: nowrap;
+            width: 108px;
+        }
+
+        .kegiatan {
+            background-color: transparent;
+            height: 31px;
+            left: 112px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: center;
+            top: 0px;
+            white-space: nowrap;
+            width: 187px;
+        }
+
+        .foto-kegiatan-container-2 {
+            height: 582px;
+            left: 0px;
+            top: 0px;
+            width: 563px;
+        }
+
+        .foto-kegiatan-2-1 {
+            background-color: transparent;
+            height: 288px;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+            top: 294px;
+            width: 563px;
+        }
+
+        .foto-kegiatan-1-2 {
+            height: 289px;
+            left: 1px;
+            width: 562px;
+        }
+
+        .foto-kegiatan-container-3 {
+            height: 568px;
+            left: 617px;
+            top: 14px;
+            width: 598px;
+        }
+
+        .foto-kegiatan-3-1 {
+            background-color: transparent;
+            height: 261px;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+            top: 0px;
+            width: 465px;
+        }
+
+        .foto-kegiatan-4-1 {
+            background-color: transparent;
+            height: 288px;
+            left: 4px;
+            object-fit: cover;
+            position: absolute;
+            top: 280px;
+            width: 594px;
+        }
+
+        .overlap-group6 {
+            background-color: transparent;
+            height: 745px;
+            left: 240px;
+            position: absolute;
+            top: 4066px;
+            width: 967px;
+        }
+
+        .contact {
+            background-color: var(--white);
+            height: 350px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 960px;
+        }
+
+        .contact__data {
+            background-color: transparent;
+            height: 158px;
+            left: 0px;
+            position: absolute;
+            top: 128px;
+            width: 581px;
+        }
+
+        .lets-talk {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: auto;
+        }
+
+        .kontak-kami {
+            background-color: transparent;
+            height: 54px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 32px;
+            width: auto;
+        }
+
+        .name-1 {
+            background-color: transparent;
+            height: auto;
+            left: 39px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 15px;
+            white-space: nowrap;
+            width: auto;
+        }
+
+        .instagram-logo-240-1 {
+            background-color: transparent;
+            height: 28px;
+            left: 9px;
+            object-fit: cover;
+            position: absolute;
+            top: 11px;
+            width: 30px;
+        }
+
+        .layanan {
+            background-color: transparent;
+            height: 36px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 0px;
+            width: auto;
+        }
+
+        .pelayanan {
+            background-color: transparent;
+            cursor: pointer;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 52px;
+            width: auto;
+        }
+
+        .menu-1 {
+            background-color: transparent;
+            cursor: pointer;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 84px;
+            width: auto;
+        }
+
+        .overlap-group1-2 {
+            height: 204px;
+            left: 598px;
+            top: 104px;
+            width: 223px;
+        }
+
+        .overlap-group3-1 {
+            background-color: transparent;
+            height: 157px;
+            left: 0px;
+            position: absolute;
+            top: 104px;
+            width: 222px;
+        }
+
+        .alamat-kami {
+            background-color: transparent;
+            height: auto;
+            left: 39px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 4px;
+            white-space: nowrap;
+            width: auto;
+        }
+
+        .foto-kegiatan {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        .foto-kegiatan-1-3 {
+            background-color: transparent;
+            object-fit: cover;
+            position: absolute;
+            top: 0px;
+        }
+
+        .foto-kegiatan-container-4 {
+            background-color: transparent;
+            position: absolute;
+        }
+
+        .gangguan {
+            background-color: transparent;
+            height: auto;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 17px;
+        }
+
+        .overlap-group-3 {
+            background-color: transparent;
+            left: 0px;
+        }
+
+        .overlap-group1-3 {
+            background-color: transparent;
+            position: absolute;
+        }
+
+
+        .c_artikel5-frame {
+            width: 100%;
+            overflow: hidden;
+            max-width: 1440px;
+            box-sizing: border-box;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: #fff;
+          }
+          
+          .c_artikel5-text,
+          .c_artikel5-text01 {
+            margin-top: 0;
+            text-align: left;
+            margin-bottom: 0;
+          }
+          
+          .c_artikel5-text {
+            width: 100%;
+            max-width: 389px;
+            min-height: 45px;
+          }
+          
+          .c_artikel5-text01 {
+            color: #393939;
+            font-size: 36px;
+            font-style: normal;
+            font-family: "Poppins",sans-serif;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0;
+            text-transform: none;
+          }
+          
+          .c_artikel5-text02 {
+            width: 100%;
+            max-width: 428px;
+            margin-top: 0;
+            min-height: 167px;
+            text-align: justify;
+            margin-bottom: 0;
+          }
+          
+          .c_artikel5-text03 {
+            color: #393939;
+            font-size: 16px;
+            font-style: normal;
+            margin-top: 0;
+            text-align: justified;
+            font-family: "Poppins",sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 0;
+            letter-spacing: 0;
+            text-transform: none;
+          }
+          
+          .c_artikel5-text04 {
+            width: 100%;
+            max-width: 424px;
+            margin-top: 0;
+            min-height: 319px;
+            text-align: justify;
+            margin-bottom: 0;
+          }
+          
+          .c_artikel5-text05,
+          .c_artikel5-text06,
+          .c_artikel5-text07,
+          .c_artikel5-text08 {
+            color: #393939;
+            font-size: 16px;
+            font-style: normal;
+            margin-top: 0;
+            text-align: justified;
+            font-family: "Poppins",sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 0;
+            letter-spacing: 0;
+            text-transform: none;
+          }
+          
+          .c_artikel5-text09 {
+            width: 100%;
+            max-width: 551px;
+            margin-top: 0;
+            min-height: 430px;
+            text-align: justify;
+            margin-bottom: 0;
+          }
+          
+          .c_artikel5-text10,
+          .c_artikel5-text11,
+          .c_artikel5-text12,
+          .c_artikel5-text13,
+          .c_artikel5-text14,
+          .c_artikel5-text15 {
+            color: #393939;
+            font-size: 16px;
+            font-style: normal;
+            margin-top: 0;
+            text-align: justified;
+            font-family: "Poppins",sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 0;
+            letter-spacing: 0;
+            text-transform: none;
+          }
+          
+          .c_artikel5-rectangle {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            display: block;
+            max-width: 284px;
+            border-radius: 10px 10px 10px 10px;
+          }
+          
+          .c_artikel5-text16,
+          .c_artikel5-text17 {
+            margin-top: 0;
+            text-align: left;
+            margin-bottom: 0;
+          }
+          
+          .c_artikel5-text16 {
+            width: 100%;
+            max-width: auto;
+            min-height: auto;
+          }
+          
+          .c_artikel5-text17 {
+            color: #a6a6a6;
+            font-size: 14px;
+            font-style: normal;
+            font-family: "Poppins",sans-serif;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0;
+            text-transform: none;
+          }
+          
+        /* screen - artikel-5 */
+
+        .artikel-5 {
+            background-color: var(--white);
+            height: 1024px;
+            overflow: hidden;
+            overflow-x: hidden;
+            position: relative;
+            width: 1440px;
+        }
+
+        .artikel-5 .auto-flex {
+            height: 156px;
+            left: 0px;
+            top: 0px;
+            width: 1442px;
+        }
+
+        .artikel-5 .overlap-group {
+            background-color: var(--white);
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .artikel-5 .rectangle-2 {
+            background-color: var(--white);
+            height: 72px;
+            left: 207px;
+            position: absolute;
+            top: 0px;
+            width: 1026px;
+        }
+
+        .artikel-5 .rectangle-3 {
+            background-color: var(--white);
+            box-shadow: 0px 4px 4px #0000001a;
+            height: 72px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 1440px;
+        }
+
+        .artikel-5 .aku-bisa {
+            background-color: transparent;
+            height: auto;
+            left: 163px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 24px;
+            width: auto;
+        }
+
+        .artikel-5 .title {
+            background-color: transparent;
+            height: 45px;
+            left: 107px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 111px;
+            width: 332px;
+        }
+
+        .artikel-5 .auto-flex3 {
+            height: 813px;
+            left: 107px;
+            top: 182px;
+            width: 1270px;
+        }
+
+        .artikel-5 .auto-flex1 {
+            height: 738px;
+            left: 0px;
+            top: 0px;
+            width: 428px;
+        }
+
+        .artikel-5 .cerebral-palsy-cp {
+            background-color: transparent;
+            height: 137px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 0px;
+            width: 428px;
+        }
+
+        .artikel-5 .gejala-gejala-cp-bi {
+            background-color: transparent;
+            height: 360px;
+            left: 1px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 167px;
+            width: 424px;
+        }
+
+        .artikel-5 .overlap-group1 {
+            background-color: var(--white);
+            height: 157px;
+            left: 181px;
+            position: absolute;
+            top: 581px;
+            width: 222px;
+        }
+
+        .artikel-5 .instagram-logo-240-1-1 {
+            background-color: transparent;
+            height: 16px;
+            left: 0px;
+            object-fit: cover;
+            position: absolute;
+            top: 79px;
+            width: 16px;
+        }
+
+        .artikel-5 .auto-flex2 {
+            height: 780px;
+            left: 461px;
+            top: 33px;
+            width: 471px;
+        }
+
+        .artikel-5 .pengobatan-meskipun {
+            background-color: transparent;
+            height: 430px;
+            left: 42px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: justify;
+            top: 0px;
+            width: 429px;
+        }
+
+        .artikel-5 .overlap-group2 {
+            background-color: transparent;
+            height: 169px;
+            left: 192px;
+            position: absolute;
+            top: 530px;
+            width: 223px;
+        }
+
+        .artikel-5 .rectangle-16 {
+            background-color: transparent;
+            height: 157px;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 222px;
+        }
+
+        .artikel-5 .phone {
+            background-color: transparent;
+            height: 24px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 124px;
+            width: auto;
+        }
+
+        .artikel-5 .x2024-aku-bisa-all-right-reserved {
+            background-color: transparent;
+            height: 21px;
+            left: 0px;
+            letter-spacing: 0.00px;
+            line-height: Truepx;
+            position: absolute;
+            text-align: left;
+            top: 759px;
+            width: auto;
+        }
+
+        .artikel-5 .rectangle-7 {
+            background-color: transparent;
+            height: 280px;
+            left: 953px;
+            object-fit: cover;
+            position: absolute;
+            top: 109px;
+            width: 317px;
+        }
+
+        .artikel-5 .auto {
+            background-color: transparent;
+            position: absolute;
+        }
